@@ -37,9 +37,9 @@ class MainActivity : AppCompatActivity(), CoroutineScope by MainScope(){
         setContentView(R.layout.activity_main)
         requestSigIn()
         list = mutableListOf()
-        val lvDatos = findViewById<ListView>(R.id.listView)
+        val lsv = findViewById<ListView>(R.id.listView)
         array = ArrayAdapter(this, android.R.layout.simple_list_item_1, list!!)
-        lvDatos.adapter = array
+        lsv.adapter = array
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
